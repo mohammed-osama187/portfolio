@@ -1,0 +1,190 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
+    padding-top: 60px;
+    color: #555;
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #eee;
+    width: 100%;
+    z-index: 1020;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 10px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+#about {
+    top: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+#about p {
+    display: block;
+}
+
+#about a {
+    text-decoration: none;
+    color: #222;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#about a:hover {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.photo img { 
+    border-radius: 50%;
+    width: 250px;
+}
+
+.photo {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.html,
+.css,
+.JS {
+    display: inline-block;
+}
+
+.card {
+    background-color: #eee;
+    width: 250px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 15px;
+    position: relative;
+    margin: 10px;
+    z-index: 1000;
+    box-shadow: 3px 3px 3px #333;
+    transition: transform 0.3s ease;
+}
+
+.card::before {
+    content: "";
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    vertical-align: middle;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.html .card::before {
+    background-color: #e44d26;
+}
+
+.css .card::before {
+    background-color: #2965f1;
+}
+
+.JS .card::before {
+    background-color: #f5de19;
+}
+
+.card img,
+h4,
+p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card img {
+    height: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+main ul li {
+    position: relative;
+    padding: 5px;
+}
+
+main ul li::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 50%;
+    margin-top: -4.5px;
+    height: 0;
+    width: 0;
+    border: 5px solid;
+    border-color: transparent transparent transparent #000;
+}
+
+footer {
+    background-color: #ccc;
+    width: 100%;
+    padding: 20px 0 50px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+footer p {
+    color: #333;
+    display: block;
+    text-align: center;
+    margin: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #111;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+    border-color: #007bff;
+}
