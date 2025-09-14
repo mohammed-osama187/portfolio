@@ -9,14 +9,17 @@ body {
     padding-top: 50px;
     color: #555;
     background-color: #fff;
+    height: 100vh;
 }
 
 #summary, #exp, #technical-skills, #languages {
-background-color: #cbcbcb;
-padding: 5px 10px;
-position: relative;
-left: -8px;
-width: 100%;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    position: relative;
+    left: -8px;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0px -10px 10px #f1f1f1, 0px 10px 10px #f1f1f1;
 }
 
 #about, #edu, #vol-work, #soft-skills, #certifications-courses {
@@ -27,12 +30,13 @@ width: 100%;
     width: 100%;
 }
 
-#technical-skills {
+#technical-skills, #soft-skills, #languages {
     padding-bottom: 12px;
 }
 
 h1 {
     text-align: center;
+    margin-bottom: -25px;
 }
 
 h2 {
@@ -47,6 +51,13 @@ nav {
     background-color: #eee;
     width: 100%;
     z-index: 1020;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    padding: 0px 5px;
 }
 
 nav ul li {
@@ -92,6 +103,16 @@ main ul li::before {
     top: 20px;
     width: 100%;
     text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#about h2 {
+    width: 100%;
+    height: fit-content;
 }
 
 #about p {
@@ -111,15 +132,23 @@ main ul li::before {
 }
 
 .photo img { 
-    border-radius: 50%;
-    width: 250px;
+    border-radius: 10%;
+    width: 280px;
+    margin: 40px 20px;
 }
 
-.photo {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+.info {
+    margin: 40px 20px;
+    border-radius: 5px;
+    padding: 5px 20px 5px ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border: solid 2px #e1e1e1;
+    flex-grow: 1;
 }
 
 .html, .css, .JS, .VS-code, .canva, .ChatGPT {
