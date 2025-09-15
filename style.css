@@ -55,7 +55,7 @@ nav {
 
 nav ul {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
     padding: 0px 5px;
 }
