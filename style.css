@@ -10,37 +10,136 @@ body {
     color: #555;
     background-color: #fff;
     height: 100vh;
+    margin: 0;
 }
 
-#summary, #exp, #technical-skills, #languages {
-    background-color: #f1f1f1;
-    padding: 5px 10px;
+#edu, #vol-work, #soft-skills, #certifications-courses {
+background-color: #f1f1f1;
+padding: 5px 10px;
     position: relative;
-    left: -8px;
     width: 100%;
     z-index: 50;
     box-shadow: 0px -10px 10px #f1f1f1, 0px 10px 10px #f1f1f1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-#about, #edu, #vol-work, #soft-skills, #certifications-courses {
+#about, #summary, #exp, #technical-skills, #languages {
     background-color: #fff;
     padding: 5px 10px;
     position: relative;
-    left: -8px;
     width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #technical-skills, #soft-skills, #languages {
     padding-bottom: 12px;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: -25px;
+#programming_language , #tools {
+    display: flex;
+    flex-flow: row wrap;
 }
 
-h2 {
+h1 {
+    z-index: 100;
+    text-align: center;
+}
+
+h1 span{
+    opacity: 0;
+    padding: 0 5px;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+h1 span:nth-child(2) {
+    animation-delay: .25s;
+}
+
+h1 span:nth-child(3) {
+    animation-delay: .5s;
+}
+
+h1 span:nth-child(4) {
+    animation-delay: .75s;
+}
+
+.info span{
+    opacity: 0;
+    padding: 0 0.5px;
+    animation-name: appear;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.info span:nth-child(2){
+    animation-delay: 1.1s;
+}
+
+.info span:nth-child(3){
+    animation-delay: 1.2s;
+}
+
+.info span:nth-child(4){
+    animation-delay: 1.3s;
+}
+
+.info span:nth-child(5){
+    animation-delay: 1.4s;
+}
+
+.info span:nth-child(6){
+    animation-delay: 1.5s;
+}
+
+.info span:nth-child(7){
+    animation-delay: 1.6s;
+}
+
+.info span:nth-child(8){
+    animation-delay: 1.7s;
+}
+
+.info span:nth-child(9){
+    animation-delay: 1.8s;
+}
+
+.info span:nth-child(10){
+    animation-delay: 1.9s;
+}
+
+.info span:nth-child(11){
+    animation-delay: 2s;
+}
+
+.info span:nth-child(12){
+    animation-delay: 2.1s;
+}
+
+.info span:nth-child(13){
+    animation-delay: 2.2s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h2 , h3 , h4 {
     color: #333;
+    width: 100%;
 }
 
 nav {
@@ -99,26 +198,6 @@ main ul li::before {
     border-color: transparent transparent transparent #000;
 }
 
-#about {
-    top: 20px;
-    width: 100%;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#about h2 {
-    width: 100%;
-    height: fit-content;
-}
-
-#about p {
-    display: block;
-}
-
 #about a {
     text-decoration: none;
     color: #222;
@@ -130,7 +209,9 @@ main ul li::before {
     color: #007bff;
     border-color: #007bff;
 }
-
+.photo {
+    display: inline-flex;
+}
 .photo img { 
     border-radius: 10%;
     width: 280px;
@@ -141,7 +222,7 @@ main ul li::before {
     margin: 40px 20px;
     border-radius: 5px;
     padding: 5px 20px 5px ;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -151,8 +232,12 @@ main ul li::before {
     flex-grow: 1;
 }
 
-.html, .css, .JS, .VS-code, .canva, .ChatGPT {
-    display: inline-block;
+.info .contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
 }
 
 .card {
@@ -193,6 +278,14 @@ main ul li::before {
 }
 
 .JS .card::before {
+    background-color: #f5de19;
+}
+
+.Cpp .card::before {
+    background-color: #5f99d0;
+}
+
+.python .card::before {
     background-color: #f5de19;
 }
 
@@ -247,8 +340,34 @@ p {
     font-weight: bold;
 }
 
+.certificate {
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    background-color: #eee;
+    margin: 0px 10px 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #555;
+}
+
+.certificate:hover {
+    transform: scale(1.05);
+}
+
+.certificate img {
+    margin: auto;
+    width: 200px;
+    border-radius: 10px;
+    display:block;
+}
+
+.certificate p {
+    font-weight: bold;
+}
+
 footer {
-    background-color: #a1a1a1;
     width: 100%;
     padding: 22px 10px 65px;
     position: relative;
