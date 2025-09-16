@@ -14,8 +14,8 @@ body {
 }
 
 #edu, #vol-work, #soft-skills, #certifications-courses {
-background-color: #f1f1f1;
-padding: 5px 10px;
+    background-color: #f1f1f1;
+    padding: 5px 20px;
     position: relative;
     width: 100%;
     z-index: 50;
@@ -24,11 +24,12 @@ padding: 5px 10px;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+    
 }
 
 #about, #summary, #exp, #technical-skills, #languages {
     background-color: #fff;
-    padding: 5px 10px 12px;
+    padding: 5px 20px 12px;
     position: relative;
     width: 100%;
     display: flex;
@@ -146,11 +147,13 @@ nav {
     background-color: #eee;
     width: 100%;
     z-index: 1020;
+    height: 50px;
+    overflow: visible;
 }
 
 nav ul {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
     padding: 0px 5px;
 }
@@ -172,6 +175,65 @@ nav a:hover {
     color: #007bff;
     border-color: #007bff;
 }
+
+nav input[type=checkbox] {
+    display: none;
+}
+
+nav span {
+    cursor: pointer;
+    background-color: black ;
+    display: none;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+}
+
+@media (max-width: 967px) {
+
+    nav label {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    nav span {
+        cursor: pointer;
+        background-color: #555 ;
+        border-radius: 5px;
+        display: block;
+        width: 30px;
+        height: 5px;
+        margin: 3px;
+    }
+
+    nav input[type=checkbox]:checked ~ul {
+        display: block;
+        animation: show .5s 1 forwards;
+    }
+    
+    @keyframes show {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    nav ul {
+        display: none;
+        padding-left: 0px;
+        transform: translateY(30px);
+    }
+    
+    nav ul li {
+        background-color: #eee;
+        padding: 8px;
+        width: 100%;
+        text-align: center; 
+    }
+}
+
 
 ul {
     list-style: none;
@@ -214,6 +276,16 @@ main ul li::before {
     gap: 20px; 
 }
 
+@media (max-width: 720px) {
+    #about {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: flex-start; 
+        gap: 20px; 
+    }
+}
+
 .photo img { 
     border-radius: 10%;
     width: 250px;
@@ -250,7 +322,7 @@ main ul li::before {
     margin: 10px;
     z-index: 1000;
     box-shadow: 3px 3px 3px #333;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .card::before {
@@ -267,6 +339,7 @@ main ul li::before {
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 6px 6px 15px #888;
 }
 
 .html .card::before {
@@ -320,13 +393,14 @@ p {
     padding: 10px;
     margin: 0px 10px 25px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     border-radius: 15px 50px;
     box-shadow: 3px 3px 5px #555;
 }
 
 .box:hover {
     transform: scale(1.05);
+    box-shadow: 6px 6px 15px #888;
 }
 
 .box img {
@@ -347,13 +421,14 @@ p {
     background-color: #eee;
     margin: 0px 10px 25px;
     text-align: center;
-    transition: transform 0.3s ease;
-    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-radius: 15px;
     box-shadow: 3px 3px 5px #555;
 }
 
 .certificate:hover {
     transform: scale(1.05);
+    box-shadow: 6px 6px 15px #888;
 }
 
 .certificate img {
